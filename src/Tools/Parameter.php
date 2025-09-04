@@ -4,8 +4,8 @@ namespace Partitech\PhpMistral\Tools;
 
 class Parameter
 {
-    const string DEFAULT_TYPE = 'string';
-    const string STRING_TYPE = 'string';
+    public const DEFAULT_TYPE = 'string';
+    public const STRING_TYPE = 'string';
     private ?string $type;
     private ?string $name;
     private ?string $description;
@@ -20,9 +20,9 @@ class Parameter
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -38,9 +38,9 @@ class Parameter
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -56,9 +56,9 @@ class Parameter
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
